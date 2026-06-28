@@ -145,7 +145,7 @@ export const skills: Skill[] = [
   { id: 'vue', name: 'Vue.js', icon: 'SiVuedotjs', category: 'frontend', proficiency: 55 },
   { id: 'angular', name: 'Angular', icon: 'SiAngular', category: 'frontend', proficiency: 50 },
   { id: 'threejs', name: 'Three.js', icon: 'SiThreedotjs', category: 'frontend', proficiency: 68 },
-  { id: 'framer', name: 'Framer Motion', icon: 'SiFramer', category: 'frontend', proficiency: 82 },
+  { id: 'framer', name: 'Framer Motion', icon: 'SiFramer', category: 'frontend', proficiency: 72 },
   { id: 'scss', name: 'SCSS', icon: 'SiSass', category: 'frontend', proficiency: 99 },
   {
     id: 'tailwind',
@@ -161,14 +161,14 @@ export const skills: Skill[] = [
     category: 'frontend',
     proficiency: 50,
   },
-  { id: 'zustand', name: 'Zustand', icon: 'SiZustand', category: 'frontend', proficiency: 50 },
-  { id: 'redux', name: 'Redux', icon: 'SiRedux', category: 'frontend', proficiency: 50 },
+  { id: 'zustand', name: 'Zustand', icon: 'SiZustand', category: 'frontend', proficiency: 90 },
+  { id: 'redux', name: 'Redux', icon: 'SiRedux', category: 'frontend', proficiency: 85 },
   {
     id: 'tanstackquery',
     name: 'Tanstack Query',
     icon: 'SiTanstackquery',
     category: 'frontend',
-    proficiency: 50,
+    proficiency: 90,
   },
 
   // Backend
