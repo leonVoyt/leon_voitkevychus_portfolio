@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alexchen.dev/sitemap.xml
+Sitemap: https://leon-voitkevychus-portfolio.vercel.app/

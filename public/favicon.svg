@@ -1,4 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#6366f1"/>
-  <text x="16" y="21" text-anchor="middle" fill="white" font-family="system-ui,sans-serif" font-size="12" font-weight="700">AC</text>
+  <defs>
+    <linearGradient id="lv-gradient" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366f1" />
+      <stop offset="0.5" stop-color="#8b5cf6" />
+      <stop offset="1" stop-color="#d946ef" />
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="url(#lv-gradient)" />
+  <text
+    x="16"
+    y="21"
+    text-anchor="middle"
+    fill="white"
+    font-family="Inter, system-ui, sans-serif"
+    font-size="11"
+    font-weight="700"
+    letter-spacing="-0.04em"
+  >
+    LV
+  </text>
 </svg>

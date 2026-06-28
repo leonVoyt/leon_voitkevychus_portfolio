@@ -47,7 +47,7 @@ export const personal: PersonalInfo = {
   whatsapp: 'https://wa.me/+380631031201',
   telegram: 'https://t.me/Vneol',
   cvUrl: resume,
-  url: 'https://alexchen.dev',
+  url: 'https://leon-voitkevychus-portfolio.vercel.app/',
   initials: 'LV',
 };
 
