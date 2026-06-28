@@ -1,0 +1,98 @@
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+
+  --color-bg: #fafafa;
+  --color-bg-elevated: #ffffff;
+  --color-bg-subtle: #f4f4f5;
+  --color-surface: rgba(255, 255, 255, 0.72);
+  --color-surface-hover: rgba(255, 255, 255, 0.88);
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-border-strong: rgba(0, 0, 0, 0.14);
+  --color-text: #09090b;
+  --color-text-secondary: #52525b;
+  --color-text-muted: #a1a1aa;
+  --color-accent: #6366f1;
+  --color-accent-hover: #4f46e5;
+  --color-accent-soft: rgba(99, 102, 241, 0.12);
+  --color-accent-glow: rgba(99, 102, 241, 0.35);
+  --color-success: #10b981;
+  --color-error: #ef4444;
+
+  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+  --gradient-surface: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  --gradient-hero: radial-gradient(
+    ellipse 80% 60% at 50% -20%,
+    rgba(99, 102, 241, 0.15),
+    transparent
+  );
+  --gradient-blob-1: rgba(99, 102, 241, 0.25);
+  --gradient-blob-2: rgba(139, 92, 246, 0.2);
+  --gradient-blob-3: rgba(217, 70, 239, 0.15);
+
+  --shadow-sm: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 0.75rem 3rem rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 0 3.75rem var(--color-accent-glow);
+
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-blur: 1.25rem;
+
+  --header-height: 4.5rem;
+  --container-max: 80rem;
+  --section-padding: clamp(5rem, 12vw, 9rem);
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-full: 9999px;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --transition-fast: 150ms var(--ease-out-expo);
+  --transition-base: 300ms var(--ease-out-expo);
+  --transition-slow: 600ms var(--ease-out-expo);
+
+  --cursor-size: 0.75rem;
+  --cursor-ring-size: 2.5rem;
+}
+
+[data-theme='dark'] {
+  --color-bg: #09090b;
+  --color-bg-elevated: #18181b;
+  --color-bg-subtle: #111113;
+  --color-surface: rgba(24, 24, 27, 0.72);
+  --color-surface-hover: rgba(39, 39, 42, 0.88);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.14);
+  --color-text: #fafafa;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #71717a;
+  --color-accent: #818cf8;
+  --color-accent-hover: #a5b4fc;
+  --color-accent-soft: rgba(129, 140, 248, 0.15);
+  --color-accent-glow: rgba(129, 140, 248, 0.4);
+
+  --gradient-surface: linear-gradient(180deg, rgba(24, 24, 27, 0.9) 0%, rgba(24, 24, 27, 0.6) 100%);
+  --gradient-hero: radial-gradient(
+    ellipse 80% 60% at 50% -20%,
+    rgba(129, 140, 248, 0.12),
+    transparent
+  );
+  --gradient-blob-1: rgba(99, 102, 241, 0.18);
+  --gradient-blob-2: rgba(139, 92, 246, 0.14);
+  --gradient-blob-3: rgba(217, 70, 239, 0.1);
+
+  --shadow-sm: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 0.75rem 3rem rgba(0, 0, 0, 0.4);
+
+  --glass-bg: rgba(24, 24, 27, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}

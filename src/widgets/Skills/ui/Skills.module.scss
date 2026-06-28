@@ -1,0 +1,119 @@
+.skills {
+  @include section-padding;
+  background: $color-bg-subtle;
+}
+
+.filters {
+  @include flex-center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-height: rem(40);
+  margin-bottom: 3rem;
+}
+
+.filter {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: $color-text-secondary;
+  border-radius: $radius-full;
+  border: rem(1) solid $color-border;
+  background: transparent;
+  box-sizing: border-box;
+  white-space: nowrap;
+  transition:
+    color $transition-fast,
+    background-color $transition-fast,
+    border-color $transition-fast;
+
+  @include hover-capable {
+    &:hover:not(.active) {
+      color: $color-text;
+      border-color: $color-border-strong;
+    }
+  }
+
+  &.active {
+    color: white;
+    background: $gradient-primary;
+    border-color: $color-accent;
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.gridShell {
+  overflow: hidden;
+  opacity: 1;
+  transition:
+    height 0.4s $ease-out-expo,
+    opacity 0.18s $ease-out-expo;
+}
+
+.gridShellTransitioning {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(rem(160), 1fr));
+  gap: 1rem;
+  align-items: stretch;
+
+  @include respond-to(md) {
+    grid-template-columns: repeat(auto-fill, minmax(rem(180), 1fr));
+    gap: 1.25rem;
+  }
+}
+
+.card {
+  @include card-base;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  cursor: default;
+  min-height: rem(140);
+
+  @include hover-capable {
+    &:hover {
+      border-color: $color-border-strong;
+      box-shadow: $shadow-md;
+      transform: translateY(rem(-2));
+    }
+  }
+}
+
+.iconWrapper {
+  @include flex-center;
+  width: rem(48);
+  height: rem(48);
+  border-radius: $radius-md;
+  background: $color-accent-soft;
+  color: $color-accent;
+  flex-shrink: 0;
+}
+
+.skillName {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: $color-text;
+}
+
+.proficiencyBar {
+  height: rem(3);
+  background: $color-border;
+  border-radius: $radius-full;
+  overflow: hidden;
+  margin-top: auto;
+}
+
+.proficiencyFill {
+  height: 100%;
+  background: $gradient-primary;
+  border-radius: $radius-full;
+}

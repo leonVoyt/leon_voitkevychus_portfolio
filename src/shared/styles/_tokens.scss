@@ -1,0 +1,72 @@
+@use 'sass:math';
+
+$base-font-size: 16;
+
+@function rem($pixels) {
+  @return math.div($pixels, $base-font-size) * 1rem;
+}
+
+// Colors
+$color-bg: var(--color-bg);
+$color-bg-elevated: var(--color-bg-elevated);
+$color-bg-subtle: var(--color-bg-subtle);
+$color-surface: var(--color-surface);
+$color-surface-hover: var(--color-surface-hover);
+$color-border: var(--color-border);
+$color-border-strong: var(--color-border-strong);
+$color-text: var(--color-text);
+$color-text-secondary: var(--color-text-secondary);
+$color-text-muted: var(--color-text-muted);
+$color-accent: var(--color-accent);
+$color-accent-hover: var(--color-accent-hover);
+$color-accent-soft: var(--color-accent-soft);
+$color-accent-glow: var(--color-accent-glow);
+$color-success: var(--color-success);
+$color-error: var(--color-error);
+
+// Gradients
+$gradient-primary: var(--gradient-primary);
+$gradient-surface: var(--gradient-surface);
+$gradient-hero: var(--gradient-hero);
+$gradient-blob-1: var(--gradient-blob-1);
+$gradient-blob-2: var(--gradient-blob-2);
+$gradient-blob-3: var(--gradient-blob-3);
+
+// Shadows
+$shadow-sm: var(--shadow-sm);
+$shadow-md: var(--shadow-md);
+$shadow-lg: var(--shadow-lg);
+$shadow-glow: var(--shadow-glow);
+
+// Glass
+$glass-bg: var(--glass-bg);
+$glass-border: var(--glass-border);
+$glass-blur: var(--glass-blur);
+
+// Layout
+$header-height: var(--header-height);
+$container-max: var(--container-max);
+$section-padding: var(--section-padding);
+
+// Radius
+$radius-sm: var(--radius-sm);
+$radius-md: var(--radius-md);
+$radius-lg: var(--radius-lg);
+$radius-xl: var(--radius-xl);
+$radius-full: var(--radius-full);
+
+// Motion
+$ease-out-expo: var(--ease-out-expo);
+$ease-in-out: var(--ease-in-out);
+$transition-fast: var(--transition-fast);
+$transition-base: var(--transition-base);
+$transition-slow: var(--transition-slow);
+
+// Fonts
+$font-sans: var(--font-sans);
+$font-display: var(--font-display);
+$font-mono: var(--font-mono);
+
+// Cursor
+$cursor-size: var(--cursor-size);
+$cursor-ring-size: var(--cursor-ring-size);

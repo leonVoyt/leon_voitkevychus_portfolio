@@ -1,0 +1,47 @@
+@use 'sass:map';
+
+$breakpoints: (
+  xs: 320px,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1536px,
+  uhd: 2560px,
+);
+
+@mixin respond-to($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$breakpoint}` not found.";
+  }
+}
+
+@mixin respond-below($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (max-width: calc(map.get($breakpoints, $breakpoint) - 1px)) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-between($min, $max) {
+  @media (min-width: map.get($breakpoints, $min)) and (max-width: calc(map.get($breakpoints, $max) - 1px)) {
+    @content;
+  }
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+@mixin hover-capable {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}

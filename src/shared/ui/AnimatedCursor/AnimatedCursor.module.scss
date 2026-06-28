@@ -1,0 +1,49 @@
+.dot,
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9998;
+  will-change: transform;
+  margin-top: calc($cursor-size / -2);
+  margin-left: calc($cursor-size / -2);
+}
+
+.dot {
+  width: $cursor-size;
+  height: $cursor-size;
+  background: $color-accent;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+}
+
+.ring {
+  width: $cursor-ring-size;
+  height: $cursor-ring-size;
+  margin-top: calc($cursor-ring-size / -2);
+  margin-left: calc($cursor-ring-size / -2);
+  border: rem(1) solid $color-accent;
+  border-radius: 50%;
+  opacity: 0.4;
+  transition:
+    width 0.3s,
+    height 0.3s,
+    opacity 0.3s,
+    margin 0.3s;
+}
+
+:global(body[data-cursor='hover']) .ring {
+  width: rem(56);
+  height: rem(56);
+  margin-top: rem(-28);
+  margin-left: rem(-28);
+  opacity: 0.7;
+}
+
+@media (hover: none) {
+  .dot,
+  .ring {
+    display: none;
+  }
+}

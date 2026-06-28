@@ -1,0 +1,87 @@
+.footer {
+  position: relative;
+  padding: 4rem 0 2rem;
+  border-top: rem(1) solid $color-border;
+  overflow: hidden;
+}
+
+.bgAnimation {
+  @include absolute-fill;
+  background: linear-gradient(90deg, transparent, $color-accent-soft, transparent);
+  background-size: 200% 100%;
+  animation: gradient-shift 8s ease infinite;
+  opacity: 0.3;
+
+  @include reduced-motion {
+    animation: none;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.top {
+  @include flex-between;
+  margin-bottom: 3rem;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.logoMark {
+  @include flex-center;
+  width: rem(40);
+  height: rem(40);
+  font-size: 0.875rem;
+  font-weight: 700;
+  @include text-gradient;
+  border: rem(1) solid $color-border;
+  border-radius: $radius-sm;
+}
+
+.tagline {
+  font-size: 0.9375rem;
+  color: $color-text-muted;
+  max-width: rem(280);
+}
+
+.backToTop {
+  @include flex-center;
+  width: rem(48);
+  height: rem(48);
+  border-radius: $radius-full;
+  color: $color-text-secondary;
+  border: rem(1) solid $color-border;
+  transition: all $transition-base;
+
+  @include hover-capable {
+    &:hover {
+      color: $color-accent;
+      border-color: $color-accent;
+      box-shadow: $shadow-glow;
+    }
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.bottom {
+  @include flex-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: rem(1) solid $color-border;
+}
+
+.copyright,
+.craft {
+  font-size: 0.8125rem;
+  color: $color-text-muted;
+}

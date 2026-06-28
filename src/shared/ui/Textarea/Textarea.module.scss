@@ -1,0 +1,45 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: $color-text-secondary;
+}
+
+.textarea {
+  min-height: rem(140);
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: $color-text;
+  background: $color-bg-elevated;
+  border: rem(1) solid $color-border;
+  border-radius: $radius-md;
+  resize: vertical;
+  transition:
+    border-color $transition-fast,
+    box-shadow $transition-fast;
+
+  &::placeholder {
+    color: $color-text-muted;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-accent;
+    box-shadow: 0 0 0 rem(3) $color-accent-soft;
+  }
+}
+
+.hasError .textarea {
+  border-color: $color-error;
+}
+
+.error {
+  font-size: 0.8125rem;
+  color: $color-error;
+}

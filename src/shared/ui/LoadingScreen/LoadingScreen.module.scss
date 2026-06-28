@@ -1,0 +1,56 @@
+.screen {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  @include flex-center;
+  background: $color-bg;
+}
+
+.content {
+  @include flex-center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.logo {
+  @include flex-center;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.logoMark {
+  @include flex-center;
+  width: rem(64);
+  height: rem(64);
+  font-size: 1.25rem;
+  font-weight: 700;
+  @include text-gradient;
+  border: rem(1) solid $color-border;
+  border-radius: $radius-lg;
+}
+
+.logoText {
+  @include text-heading;
+  font-size: 1.125rem;
+  color: $color-text-secondary;
+}
+
+.progressTrack {
+  width: rem(200);
+  height: rem(2);
+  background: $color-border;
+  border-radius: $radius-full;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: $gradient-primary;
+  transform-origin: left;
+}
+
+.percentage {
+  @include text-mono;
+  font-size: 0.8125rem;
+  color: $color-text-muted;
+}

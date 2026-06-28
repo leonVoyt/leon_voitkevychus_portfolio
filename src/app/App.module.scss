@@ -1,0 +1,45 @@
+.app {
+  position: relative;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+.blob1 {
+  position: fixed;
+  top: 20%;
+  right: rem(-300);
+  z-index: 0;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.blob2 {
+  position: fixed;
+  bottom: 10%;
+  left: rem(-200);
+  z-index: 0;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.easterEgg {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10002;
+  @include flex-center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  @include glass;
+  border-radius: $radius-full;
+  box-shadow: $shadow-lg;
+  animation: fadeInUp 0.5s $ease-out-expo both;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.easterEggIcon {
+  font-size: 1.5rem;
+  animation: float 2s ease-in-out infinite;
+}

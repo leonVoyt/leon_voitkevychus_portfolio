@@ -1,0 +1,26 @@
+.switcher {
+  @include flex-center;
+  width: rem(40);
+  height: rem(40);
+  border-radius: $radius-full;
+  color: $color-text-secondary;
+  border: rem(1) solid $color-border;
+  background: $color-surface;
+  transition: all $transition-fast;
+
+  @include hover-capable {
+    &:hover {
+      color: $color-text;
+      border-color: $color-border-strong;
+      background: $color-surface-hover;
+    }
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.iconWrapper {
+  @include flex-center;
+}

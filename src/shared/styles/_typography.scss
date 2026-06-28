@@ -1,0 +1,98 @@
+@use 'tokens' as *;
+
+@mixin text-display {
+  font-family: $font-display;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+@mixin text-heading {
+  font-family: $font-display;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+@mixin text-body {
+  font-family: $font-sans;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+@mixin text-mono {
+  font-family: $font-mono;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+@mixin text-label {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@mixin text-balance {
+  text-wrap: balance;
+}
+
+@mixin text-pretty {
+  text-wrap: pretty;
+}
+
+.display-xl {
+  @include text-display;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+}
+
+.display-lg {
+  @include text-display;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+}
+
+.heading-lg {
+  @include text-heading;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.heading-md {
+  @include text-heading;
+  font-size: clamp(1.375rem, 2.5vw, 1.875rem);
+}
+
+.heading-sm {
+  @include text-heading;
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+}
+
+.body-lg {
+  @include text-body;
+  font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+  color: $color-text-secondary;
+}
+
+.body-md {
+  @include text-body;
+  font-size: 1rem;
+  color: $color-text-secondary;
+}
+
+.body-sm {
+  @include text-body;
+  font-size: 0.875rem;
+  color: $color-text-muted;
+}
+
+.label {
+  @include text-label;
+  color: $color-text;
+}
+
+.gradient-text {
+  background: $gradient-primary;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

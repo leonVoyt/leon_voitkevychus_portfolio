@@ -1,0 +1,39 @@
+.wrapper {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+  max-width: rem(640);
+  margin-inline: auto;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.label {
+  @include text-label;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  @include text-heading;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: $color-text;
+  margin-bottom: 1rem;
+}
+
+.description {
+  @include text-body;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: $color-text-secondary;
+  max-width: rem(560);
+  line-height: 1.7;
+}
+
+.center .description {
+  margin-inline: auto;
+}

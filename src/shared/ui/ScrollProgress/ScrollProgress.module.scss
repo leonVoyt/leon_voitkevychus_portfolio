@@ -1,0 +1,16 @@
+.track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: rem(2);
+  z-index: 9999;
+  background: transparent;
+}
+
+.bar {
+  height: 100%;
+  background: $gradient-primary;
+  transform-origin: left;
+  will-change: transform;
+}

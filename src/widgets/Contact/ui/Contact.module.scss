@@ -1,0 +1,94 @@
+.contact {
+  @include section-padding;
+  position: relative;
+  overflow: hidden;
+}
+
+.blob {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+.grid {
+  display: grid;
+  gap: 4rem;
+
+  @include respond-to(lg) {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 6rem;
+    align-items: start;
+  }
+}
+
+.info {
+  position: relative;
+  z-index: 1;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.email {
+  @include flex-center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: $color-text;
+  transition: color $transition-fast;
+
+  @include hover-capable {
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.socialLink {
+  @include flex-center;
+  width: rem(48);
+  height: rem(48);
+  border-radius: $radius-full;
+  color: $color-text-secondary;
+  border: rem(1) solid $color-border;
+  transition: all $transition-base;
+
+  @include hover-capable {
+    &:hover {
+      color: $color-accent;
+      border-color: $color-accent;
+      transform: translateY(rem(-2));
+    }
+  }
+}
+
+.cvButton {
+  @include flex-center;
+  justify-content: flex-start;
+  gap: 0.625rem;
+  align-self: flex-start;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: $color-text;
+  border: rem(1) solid $color-border-strong;
+  border-radius: $radius-full;
+  transition: all $transition-base;
+
+  @include hover-capable {
+    &:hover {
+      border-color: $color-accent;
+      color: $color-accent;
+    }
+  }
+}

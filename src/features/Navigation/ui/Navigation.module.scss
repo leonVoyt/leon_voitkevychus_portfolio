@@ -1,0 +1,131 @@
+.root {
+  display: flex;
+  align-items: center;
+
+  @include respond-to(lg) {
+    flex: 1;
+    justify-content: center;
+  }
+
+  @include respond-below(lg) {
+    margin-left: auto;
+  }
+}
+
+.desktop {
+  display: none;
+
+  @include respond-to(lg) {
+    display: block;
+  }
+}
+
+.list {
+  @include flex-center;
+  gap: 0.25rem;
+}
+
+.link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: $color-text-secondary;
+  border-radius: $radius-full;
+  transition: color $transition-fast;
+
+  @include hover-capable {
+    &:hover {
+      color: $color-text;
+    }
+  }
+
+  &.active {
+    color: $color-text;
+  }
+}
+
+.indicator {
+  position: absolute;
+  inset: 0;
+  background: $color-accent-soft;
+  border-radius: $radius-full;
+  z-index: -1;
+}
+
+.mobileToggle {
+  @include flex-center;
+  width: rem(40);
+  height: rem(40);
+  color: $color-text;
+  border-radius: $radius-sm;
+  position: relative;
+  z-index: 502;
+
+  @include respond-to(lg) {
+    display: none;
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.mobileBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 498;
+  border: none;
+  padding: 0;
+  background: $color-bg;
+  cursor: default;
+}
+
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  z-index: 499;
+  height: fit-content;
+  background: $color-bg;
+  padding: calc($header-height + 2rem) 2rem 2rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  border: none;
+
+  @include respond-to(lg) {
+    display: none;
+  }
+}
+
+.mobileList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobileLink {
+  @include flex-center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 600;
+  color: $color-text-secondary;
+  border-bottom: rem(1) solid $color-border;
+  transition: color $transition-fast;
+  text-align: left;
+
+  @include hover-capable {
+    &:hover,
+    &.active {
+      color: $color-text;
+    }
+  }
+}
+
+.mobileIndex {
+  @include text-mono;
+  font-size: 0.875rem;
+  color: $color-accent;
+}

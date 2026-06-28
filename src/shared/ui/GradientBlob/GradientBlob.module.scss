@@ -1,0 +1,41 @@
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(rem(80));
+  pointer-events: none;
+  animation: blob-drift 20s ease-in-out infinite;
+  will-change: transform;
+
+  @include reduced-motion {
+    animation: none;
+  }
+}
+
+.primary {
+  background: $gradient-blob-1;
+}
+
+.secondary {
+  background: $gradient-blob-2;
+  animation-delay: -7s;
+}
+
+.tertiary {
+  background: $gradient-blob-3;
+  animation-delay: -14s;
+}
+
+.sm {
+  width: rem(300);
+  height: rem(300);
+}
+
+.md {
+  width: rem(500);
+  height: rem(500);
+}
+
+.lg {
+  width: rem(700);
+  height: rem(700);
+}

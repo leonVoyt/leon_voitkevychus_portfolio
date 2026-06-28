@@ -1,0 +1,1 @@
+export { MouseSpotlight } from './MouseSpotlight';
